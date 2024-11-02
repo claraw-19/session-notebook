@@ -55,3 +55,35 @@ Combine the universal selector `A *`. This selects every element inside of `A`.
 > `p + .intro` selects every element with `class="intro"` that directly follows a `p`
 
 > `div + a` selects every `a` element that directly follows a `div`
+
+## General sibling selector
+
+`A ~ B` selects all siblings of an element that follow it.
+
+> `A ~ B` selects all `B` that follow a `A`
+
+## Child selector
+
+`A > B` selects direct children of an element.
+
+> `A > B` selects all `B` that are a direct children `A`
+
+## First child pseudo-selector
+
+`:first-child` selects a first child element inside of another element.
+
+> `:first-child` selects all first child elements
+
+> `p:first-child` selects all first child `<p>` elements.
+
+You can combine this pseudo-selector with other selectors.
+
+> `div p:first-child` selects all first child `<p>` elements that are in a `<div>`.
+
+## Only child pseudo-selector
+
+`:only-child` selects any element that is the only element inside of another one.
+
+> `span:only-child` selects the `<span>` elements that are the only child of some other element.
+
+> `ul li:only-child` selects the only `<li>` element that are in a `<ul>`.
