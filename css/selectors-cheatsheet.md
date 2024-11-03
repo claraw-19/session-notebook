@@ -62,13 +62,13 @@ Combine the universal selector `A *`. This selects every element inside of `A`.
 
 > `A ~ B` selects all `B` that follow a `A`
 
-## Child selector
+## Child selectors
 
 `A > B` selects direct children of an element.
 
 > `A > B` selects all `B` that are a direct children `A`
 
-## First child pseudo-selector
+### First child pseudo-selector
 
 `:first-child` selects a first child element inside of another element.
 
@@ -80,10 +80,34 @@ You can combine this pseudo-selector with other selectors.
 
 > `div p:first-child` selects all first child `<p>` elements that are in a `<div>`.
 
-## Only child pseudo-selector
+### Only child pseudo-selector
 
 `:only-child` selects any element that is the only element inside of another one.
 
 > `span:only-child` selects the `<span>` elements that are the only child of some other element.
 
 > `ul li:only-child` selects the only `<li>` element that are in a `<ul>`.
+
+### Last child pseudo-selector
+
+`:last-child` selects the last element inside of another element.
+
+> `:last-child` selects all last-child elements.
+
+> `span:last-child` selects all last-child `<span>` elements.
+
+> `ul li:last-child` selects the last `<li>` elements inside of any `<ul>`.
+
+### Nth child pseudo-selector
+
+`:nth-child(A)` selects the nth child element in another element.
+
+> `:nth-child(8)` selects every element that is the 8th child of another element.
+
+> `div p:nth-child(2)` selects the second `p` in every `div`
+
+### Nth last child selector
+
+`:nth-last-child(A)` selects an element by its order in another element, counting from the back.
+
+> `:nth-last-child(2)` selects all second-to-last child elements.
